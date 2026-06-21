@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《网店运营实务》期末考点</title>
+<meta name="description" content="《网店运营实务》期末考试复习资料，涵盖判断题、单选题、名词解释、简答题共28道，支持搜索、进度追踪。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<style>
+  :root {
+    --purple: #9b27af;
+    --purple-light: #ce93d8;
+    --purple-bg: #faf5ff;
+    --blue: #1677ff;
+    --green: #00b96b;
+    --red: #f5222d;
+    --bg: #f0f2f5;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --text-muted: #7a7a9a;
+    --border: #e8e8f0;
+    --shadow-sm: 0 1px 4px rgba(0,0,0,0.06), 0 2px 12px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, #6a1b9a 0%, #ab47bc 35%, #ec407a 70%, #ff7043 100%);
+    color: #fff;
+    padding: 32px 24px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bubbles span {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    animation: floatBubble 8s ease-in-out infinite;
+  }
+  .hero-bubbles span:nth-child(1) { width:180px;height:180px;top:-60px;right:-50px;animation-delay:0s; }
+  .hero-bubbles span:nth-child(2) { width:260px;height:260px;bottom:-100px;left:-60px;animation-delay:-3s; }
+  .hero-bubbles span:nth-child(3) { width:100px;height:100px;top:30px;left:15%;animation-delay:-1.5s; }
+  .hero-bubbles span:nth-child(4) { width:70px;height:70px;bottom:20px;right:18%;animation-delay:-4.5s; }
+  @keyframes floatBubble {
+    0%,100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-14px) scale(1.04); }
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  .hero-sub {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 18px;
+  }
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .hero-stat-num {
+    font-size: 1.3rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 0.68rem;
+    opacity: 0.75;
+    letter-spacing: 0.5px;
+  }
+  .hero-stat-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(255,255,255,0.25);
+    align-self: center;
+  }
+
+  /* ===== PROGRESS BAR ===== */
+  .progress-bar-wrap {
+    background: rgba(255,255,255,0.12);
+    height: 3px;
+    border-radius: 2px;
+    max-width: 200px;
+    margin: 20px auto 0;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: rgba(255,255,255,0.8);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+  .progress-label {
+    font-size: 0.72rem;
+    opacity: 0.7;
+    margin-top: 6px;
+  }
+
+  /* ===== STICKY NAV ===== */
+  .nav-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .nav-bar::-webkit-scrollbar { display: none; }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.22s;
+    position: relative;
+    top: 1px;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+  }
+  .nav-btn:hover { color: var(--purple); background: var(--purple-bg); }
+  .nav-btn.active { color: var(--purple); border-bottom-color: var(--purple); }
+  .nav-icon { font-size: 1rem; }
+  .nav-count {
+    font-size: 0.68rem;
+    background: var(--purple);
+    color: #fff;
+    border-radius: 10px;
+    padding: 1px 7px;
+    font-weight: 700;
+  }
+  .nav-btn.active .nav-count { background: var(--purple); }
+
+  /* ===== CONTAINER ===== */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+
+  /* ===== SECTION ===== */
+  .section {
+    margin-bottom: 48px;
+    scroll-margin-top: 68px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .section-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.08;
+    border-radius: 16px;
+    pointer-events: none;
+  }
+  .sec-judge .section-header { background: linear-gradient(135deg, #fdf0f0, #ffcdd2); border-left: 4px solid #e57373; }
+  .sec-single .section-header { background: linear-gradient(135deg, #ede7f6, #d1c4e9); border-left: 4px solid #5c6bc0; }
+  .sec-noun .section-header { background: linear-gradient(135deg, #f3e5f5, #e1bee7); border-left: 4px solid #ab47bc; }
+  .sec-short .section-header { background: linear-gradient(135deg, #e0f2f1, #b2dfdb); border-left: 4px solid #00897b; }
+  .section-icon {
+    width: 46px; height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.8);
+    box-shadow: var(--shadow-sm);
+  }
+  .section-meta-wrap { flex: 1; }
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  .sec-judge .section-title { color: #c62828; }
+  .sec-single .section-title { color: #283593; }
+  .sec-noun .section-title { color: #6a1b9a; }
+  .sec-short .section-title { color: #004d40; }
+  .section-meta {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .expand-btn {
+    font-size: 0.78rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.85);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+  }
+  .sec-judge .expand-btn { border: 1.5px solid #ef9a9a; color: #c62828; }
+  .sec-single .expand-btn { border: 1.5px solid #9fa8da; color: #3949ab; }
+  .sec-noun .expand-btn { border: 1.5px solid #ce93d8; color: #ab47bc; }
+  .sec-short .expand-btn { border: 1.5px solid #80cbc4; color: #00695c; }
+  .expand-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+
+  /* ===== QUESTION CARD ===== */
+  .q-card {
+    background: var(--card);
+    border-radius: 14px;
+    border: 1.5px solid var(--border);
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.22s, border-color 0.22s, transform 0.18s;
+    box-shadow: var(--shadow-sm);
+  }
+  .q-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+  .sec-judge .q-card.open { border-color: #ef9a9a; box-shadow: 0 4px 20px rgba(229,115,115,0.15); }
+  .sec-single .q-card.open { border-color: #9fa8da; box-shadow: 0 4px 20px rgba(92,107,192,0.15); }
+  .sec-noun .q-card.open { border-color: #ce93d8; box-shadow: 0 4px 20px rgba(171,71,188,0.15); }
+  .sec-short .q-card.open { border-color: #80cbc4; box-shadow: 0 4px 20px rgba(0,137,123,0.15); }
+  .q-header {
+    padding: 16px 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    user-select: none;
+  }
+  .q-num {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .sec-judge .q-num { background: linear-gradient(135deg, #fdf0f0, #ffcdd2); color: #c62828; }
+  .sec-single .q-num { background: linear-gradient(135deg, #ede7f6, #d1c4e9); color: #3949ab; }
+  .sec-noun .q-num { background: linear-gradient(135deg, #f3e5f5, #e1bee7); color: #ab47bc; }
+  .sec-short .q-num { background: linear-gradient(135deg, #e0f2f1, #b2dfdb); color: #00695c; }
+  .q-text {
+    flex: 1;
+    font-size: 0.93rem;
+    font-weight: 600;
+    line-height: 1.75;
+    color: var(--text);
+  }
+  .q-text mark {
+    background: linear-gradient(180deg, transparent 55%, rgba(156,39,176,0.35) 55%);
+    color: inherit;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  .q-arrow {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    margin-top: 7px;
+    transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
+    opacity: 0.6;
+  }
+  .q-card.open .q-arrow { transform: rotate(180deg); opacity: 1; }
+
+  /* ===== ANSWER PANEL ===== */
+  .q-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    transition:
+      grid-template-rows 0.32s cubic-bezier(0.4,0,0.2,1),
+      opacity 0.22s ease,
+      visibility 0s 0.32s,
+      padding-top 0.28s ease,
+      padding-bottom 0.28s ease;
+    padding: 0 18px 0 60px;
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+  .q-answer-inner { overflow: hidden; min-height: 0; }
+  .q-card.open .q-answer {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    opacity: 1;
+    padding-top: 16px;
+    padding-bottom: 18px;
+    transition:
+      grid-template-rows 0.32s cubic-bezier(0.4,0,0.2,1),
+      opacity 0.22s 0.06s ease,
+      visibility 0s 0s,
+      padding-top 0.28s ease,
+      padding-bottom 0.28s ease;
+  }
+  /* Answer area subtle bg tint per section */
+  .sec-judge .q-answer { background: #fffafa; }
+  .sec-single .q-answer { background: #f8f7fc; }
+  .sec-noun .q-answer { background: #fdf8ff; }
+  .sec-short .q-answer { background: #f7fdfc; }
+
+  .answer-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+  .sec-judge .answer-tag { background: #fdf0f0; color: #c62828; border: 1px solid #ef9a9a; }
+  .sec-single .answer-tag { background: #ede7f6; color: #3949ab; border: 1px solid #9fa8da; }
+  .sec-noun .answer-tag { background: #f3e5f5; color: #ab47bc; border: 1px solid #ce93d8; }
+  .sec-short .answer-tag { background: #e0f2f1; color: #00695c; border: 1px solid #80cbc4; }
+
+  /* ===== TRUE/FALSE BADGES ===== */
+  .badge-true {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: #1b5e20;
+    border: 1.5px solid #a5d6a7;
+  }
+  .badge-false {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    background: linear-gradient(135deg, #ffebee, #ffcdd2);
+    color: #b71c1c;
+    border: 1.5px solid #ef9a9a;
+  }
+
+  /* ===== NOUN ANSWER BLOCK ===== */
+  .noun-answer {
+    background: linear-gradient(135deg, #faf5ff, #f3e5f5);
+    border-left: 3px solid #ab47bc;
+    padding: 12px 16px;
+    border-radius: 0 10px 10px 0;
+    font-size: 0.88rem;
+    margin-top: 8px;
+    color: #333;
+    line-height: 1.85;
+  }
+
+  /* ===== ANSWER LIST ===== */
+  .answer-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .answer-list li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 1.7;
+  }
+  .answer-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .answer-text {
+    color: #555;
+    font-size: 0.87rem;
+    margin-top: 8px;
+    line-height: 1.75;
+  }
+
+  /* ===== ANSWER HIGHLIGHT KEY ===== */
+  .q-answer strong {
+    color: var(--text);
+    font-weight: 700;
+  }
+  .sec-judge .q-answer strong { color: #c62828; }
+  .sec-single .q-answer strong { color: #283593; }
+  .sec-noun .q-answer strong { color: #6a1b9a; }
+  .sec-short .q-answer strong { color: #004d40; }
+
+  /* ===== BACK TO TOP ===== */
+  .back-top {
+    position: fixed;
+    bottom: 28px;
+    right: 22px;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7b1fa2, #c2185b);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 18px rgba(123,31,162,0.35), 0 2px 8px rgba(194,24,91,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+  }
+  .back-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .back-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(123,31,162,0.45);
+  }
+
+  /* ===== TIP NOTE ===== */
+  .tip-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #faf5ff, #f3e5f5);
+    border: 1px solid #e1bee7;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #4a148c;
+    margin-top: 10px;
+    line-height: 1.65;
+  }
+  .tip-note-icon { font-size: 0.9rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* ===== ANSWER HIGHLIGHT BOX (单选题答案) ===== */
+  .answer-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    border: 1.5px solid currentColor;
+  }
+  .sec-single .answer-highlight { background: #ede7f6; color: #3949ab; border-color: #9fa8da; }
+
+  /* ===== SEARCH BOX (adapted from Uiverse by EddyBel) ===== */
+  .search-row {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border);
+    padding: 14px 20px 12px;
+    display: flex;
+    justify-content: center;
+  }
+  .search__container {
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(171, 71, 188, 0.10);
+    padding: 12px 16px;
+    border-radius: 16px;
+    position: relative;
+  }
+  .search__container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    z-index: -1;
+    filter: blur(20px);
+    border-radius: 16px;
+    opacity: 0.50;
+    background-color: #ab47bc;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(283, 65%, 35%, 0.9) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(17, 100%, 66%, 0.8) 0px, transparent 50%);
+  }
+  .search__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0.4em;
+  }
+  .search__label {
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+  }
+  .search__result {
+    font-size: 0.6em;
+    font-weight: bold;
+    color: var(--purple);
+  }
+  .search__input-wrap {
+    position: relative;
+    width: 100%;
+  }
+  .search__icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    pointer-events: none;
+    transition: color 300ms;
+    color: #aaa;
+  }
+  .search__input-wrap:focus-within .search__icon { color: var(--purple); }
+  .search__input-wrap:hover .search__icon { color: #888; }
+  .search__input {
+    border: 2px solid transparent;
+    outline: none;
+    width: 100%;
+    padding: 0.6em 2.4em 0.6em 2.6em;
+    border-radius: 20px;
+    background: #fff;
+    transition: background 300ms, color 300ms, border-color 300ms, box-shadow 300ms;
+    font-size: 0.92rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #111;
+  }
+  .search__input:hover, .search__input:focus {
+    border-color: var(--purple);
+    background: #fff;
+    color: #111;
+    box-shadow: 0 0 0 3px rgba(156,39,176,0.15);
+  }
+  .search__input::placeholder { color: #aaa; font-size: 0.85rem; }
+  .search__input:hover::placeholder, .search__input:focus::placeholder { color: #777; }
+  .search__clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0,0,0,0.08);
+    color: #666;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.7rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+  }
+  .search__clear:hover { background: rgba(0,0,0,0.18); color: #333; }
+  .search__clear.visible { display: flex; }
+  .search__input:focus ~ .search__clear { background: rgba(0,0,0,0.08); color: #666; }
+  .search__input:focus ~ .search__clear:hover { background: rgba(156,39,176,0.15); color: var(--purple); }
+
+  .no-results {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .no-results span { font-size: 2rem; display: block; margin-bottom: 12px; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    .hero { padding: 24px 16px 22px; }
+    .hero h1 { font-size: 1.15rem; letter-spacing: 1px; }
+    .hero-stats { gap: 14px; }
+    .hero-stat-num { font-size: 1.1rem; }
+    .nav-wrap { backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .nav-bar { justify-content: flex-start; max-width: 100%; padding: 0 8px; }
+    .nav-btn { padding: 10px 9px; font-size: 0.75rem; gap: 4px; flex-shrink: 0; }
+    .container { padding: 20px 12px 60px; }
+    .section-header { padding: 14px 14px; gap: 10px; }
+    .section-icon { width: 38px; height: 38px; font-size: 1.1rem; border-radius: 10px; }
+    .section-title { font-size: 1rem; }
+    .expand-btn { font-size: 0.73rem; padding: 5px 12px; }
+    .q-header { padding: 13px 14px; gap: 10px; }
+    .q-num { width: 26px; height: 26px; font-size: 0.72rem; border-radius: 7px; }
+    .q-text { font-size: 0.87rem; }
+    .q-answer { padding: 0 14px 0 50px; font-size: 0.85rem; }
+    .noun-answer { font-size: 0.84rem; padding: 10px 12px; }
+    .answer-list li { font-size: 0.84rem; }
+    .back-top { width: 42px; height: 42px; bottom: 20px; right: 16px; }
+    .hero-stat-divider { height: 32px; }
+    .search-row { padding: 12px 12px 10px; }
+    .search__container { padding: 10px 12px; }
+    .search__input { font-size: 0.85rem; padding: 0.55em 2.2em 0.55em 2.4em; }
+    .search__label { font-size: 0.68em; }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .hero, .nav-wrap, .back-top, .hero-bubbles { display: none !important; }
+    .container { max-width: 100%; padding: 0 12px; }
+    .section { margin-bottom: 24px; page-break-inside: avoid; }
+    .q-card { box-shadow: none; border: 1px solid #ddd; margin-bottom: 6px; break-inside: avoid; }
+    .q-card.open .q-answer { display: block !important; visibility: visible !important; opacity: 1 !important; padding: 10px 14px 10px 42px !important; }
+    .q-answer { display: block !important; visibility: visible !important; opacity: 1 !important; grid-template-rows: none !important; padding: 10px 14px 10px 42px !important; }
+    .q-answer-inner { overflow: visible !important; }
+    .q-header { cursor: default; }
+    .q-arrow { display: none; }
+    .section-header { border-left-width: 3px; }
+    body { background: #fff; font-size: 11pt; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bubbles">
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-badge">📚 期末复习 · 2026</div>
+    <h1>🏪 《网店运营实务》期末考点</h1>
+    <p class="hero-sub">点击下方分类导航快速跳转，点击题目可展开答案</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">28</span>
+        <span class="hero-stat-label">题目总数</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">4</span>
+        <span class="hero-stat-label">题型分类</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" id="answeredCount">0</span>
+        <span class="hero-stat-label">已查看</span>
+      </div>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-label" id="progressLabel">0 / 28 已查看</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <nav class="nav-bar" id="navBar">
+    <button class="nav-btn active" onclick="scrollToSection('judge', this)">
+      <span class="nav-icon">⚖️</span> 判断题 <span class="nav-count">5</span>
+    </button>
+    <button class="nav-btn" onclick="scrollToSection('single', this)">
+      <span class="nav-icon">🔘</span> 单选题 <span class="nav-count">15</span>
+    </button>
+    <button class="nav-btn" onclick="scrollToSection('noun', this)">
+      <span class="nav-icon">📖</span> 名词解释 <span class="nav-count">4</span>
+    </button>
+    <button class="nav-btn" onclick="scrollToSection('short', this)">
+      <span class="nav-icon">✍️</span> 简答题 <span class="nav-count">4</span>
+    </button>
+  </nav>
+  
+  <!-- SEARCH BOX -->
+  <div class="search-row">
+    <div class="search__container">
+      <div class="search__top">
+        <span class="search__result" id="searchResult"></span>
+      </div>
+      <div class="search__input-wrap">
+        <input type="text" class="search__input" id="searchInput" placeholder="输入关键词搜索题目或答案…" autocomplete="off">
+        <span class="search__icon">🔍</span>
+        <button class="search__clear" id="searchClear" onclick="clearSearch()" title="清除搜索">✕</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- NO RESULTS -->
+  <div class="no-results" id="noResults">
+    <span>🔍</span>
+    未找到匹配的题目，换个关键词试试吧
+  </div>
+
+  <!-- ====== 一、判断题 ====== -->
+  <section class="section sec-judge" id="judge">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <div class="section-meta-wrap">
+        <div class="section-title">一、判断题</div>
+        <div class="section-meta">共 5 题 · 判断正误</div>
+      </div>
+      <button class="expand-btn" onclick="toggleAll('judge', this)">全部展开</button>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">1</div>
+        <div class="q-text">一个实名身份证只能注册一家淘宝网店？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="badge-true">✓ 对</span>
+          <p class="answer-text" style="margin-top:8px;">一个身份证信息只能开通一家淘宝店铺，实名认证具有唯一性。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">2</div>
+        <div class="q-text">淘宝网店铺名称中可以有专卖店关键词？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="badge-false">✗ 错</span>
+          <p class="answer-text" style="margin-top:8px;">店铺名称中不得使用"专卖店""专营店""旗舰店"等易误导消费者的关键词，违规将面临处罚。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">3</div>
+        <div class="q-text">关键词的质量分越高越好，排名相同的位置得分高花费低？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="badge-true">✓ 对</span>
+          <p class="answer-text" style="margin-top:8px;">直通车关键词质量分越高，相同排名位置所需出价越低，可有效降低推广成本。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">4</div>
+        <div class="q-text">很多卖家在选择类目的时候不知道放在哪个类目，然后选择"其他"类目凑合用？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="badge-false">✗ 错</span>
+          <p class="answer-text" style="margin-top:8px;">商品应放置在最准确匹配的类目下，选择错误类目会影响搜索曝光，严重时触发搜索引擎处罚（商品错放类目）。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">5</div>
+        <div class="q-text">填写商品属性时应一味追求搜索量大的属性关键词？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="badge-false">✗ 错</span>
+          <p class="answer-text" style="margin-top:8px;">属性应如实填写，一味追求大搜索量的属性会导致商品描述不符，造成买家投诉、降权等风险。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 二、单选题 ====== -->
+  <section class="section sec-single" id="single">
+    <div class="section-header">
+      <div class="section-icon">🔘</div>
+      <div class="section-meta-wrap">
+        <div class="section-title">二、单选题</div>
+        <div class="section-meta">共 15 题 · 选出最优答案</div>
+      </div>
+      <button class="expand-btn" onclick="toggleAll('single', this)">全部展开</button>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">1</div>
+        <div class="q-text">一个淘宝会员最多可以绑定几个支付宝账户？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>1个</strong></div>
+          <p class="answer-text">一个淘宝会员只能绑定1个支付宝账户，保障账户安全与资金唯一性。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">2</div>
+        <div class="q-text">以下哪一项属于无效的交易凭证？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>QQ聊天记录截图</strong></div>
+          <p class="answer-text">QQ聊天记录截图不属于平台有效的交易凭证，需以阿里旺旺聊天记录或订单页面截图为准。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">3</div>
+        <div class="q-text">以下哪一类商品信息允许在淘宝网上发布？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>自家做的手工产品</strong></div>
+          <p class="answer-text">自家手工产品属于合规商品，可在淘宝发布；仿牌、违禁、假冒等商品不得发布。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">4</div>
+        <div class="q-text">淘宝网发布商品时，标题名称最多可以容纳多少个汉字/多少个字符？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>30个汉字 / 60个字符</strong></div>
+          <p class="answer-text">每个汉字占2个字符，标题上限60个字符，即最多30个纯汉字（中英混合时相应减少）。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">5</div>
+        <div class="q-text">多少像素乘多少像素的图片适合作为商品的主图？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>800×800 像素</strong></div>
+          <p class="answer-text">淘宝主图建议尺寸为800×800px（正方形），支持放大镜效果；主图文件不超过3MB，格式支持JPG/PNG/GIF。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">6</div>
+        <div class="q-text">买卖双方在订单交易成功后的多少天内可以进行评价？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>15天内</strong></div>
+          <p class="answer-text">订单完成后15天内买卖双方均可进行评价，超时后系统默认好评。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">7</div>
+        <div class="q-text">设置白平衡的目的是什么？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>告诉相机在不同光线条件下白色应该呈现的颜色</strong></div>
+          <p class="answer-text">白平衡（White Balance）用于校正色温偏差，确保商品图片色彩还原真实，避免偏黄、偏蓝等色差问题。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">8</div>
+        <div class="q-text">在淘宝网上传商品图片时，哪种格式不能上传？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>BMP</strong></div>
+          <p class="answer-text">淘宝支持的图片格式为 JPG、PNG、GIF，BMP格式文件体积过大，平台不支持上传。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">9</div>
+        <div class="q-text">要整体缩小商品图片的尺寸，可以使用PS的哪种操作？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>图像大小（调整）</strong></div>
+          <p class="answer-text">PS中使用「图像 → 图像大小」（Image Size）可等比例整体缩放图片尺寸，不影响画面内容。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">10</div>
+        <div class="q-text">直通车关键词推广通常是按什么方式计费？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>CPC（按点击次数计费）</strong></div>
+          <p class="answer-text">直通车采用 CPC（Cost Per Click）计费模式，每次用户点击广告才扣费，曝光不计费。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">11</div>
+        <div class="q-text">以下哪一个不属于免费流量？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>淘宝客</strong></div>
+          <p class="answer-text">淘宝客属于按成交付佣金的推广渠道（CPS计费），不属于免费流量；自然搜索、收藏关注等才是免费流量。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">12</div>
+        <div class="q-text">淘宝网店动销率一般是以多少天为一个周期？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>30天</strong></div>
+          <p class="answer-text">动销率 = 近30天内有销售记录的宝贝数 ÷ 店铺所有宝贝数，是衡量店铺活跃度的核心指标。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">13</div>
+        <div class="q-text">新手卖家最好选择什么类型的关键词？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>长尾关键词</strong></div>
+          <p class="answer-text">长尾关键词竞争小、精准度高、转化率好，适合新店积累基础流量和销量，建立权重后再冲击核心词。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">14</div>
+        <div class="q-text">买家要求客服推荐商品时，客服的正确做法是什么？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>引导买家需求，推荐买家需要的商品</strong></div>
+          <p class="answer-text">客服应先了解买家的具体需求（场景、预算、尺寸等），再针对性推荐匹配商品，提升成交率与满意度。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">15</div>
+        <div class="q-text">售前客服的工作内容有哪些？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div><span class="answer-tag">答案</span><strong>买家下单付款前的疑问解答、商品推荐、催付和活动通知</strong></div>
+          <p class="answer-text">售前客服核心职责：解答商品咨询 → 引导成交 → 催付款 → 活动通知，重点在于提升转化率。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 三、名词解释 ====== -->
+  <section class="section sec-noun" id="noun">
+    <div class="section-header">
+      <div class="section-icon">📖</div>
+      <div class="section-meta-wrap">
+        <div class="section-title">三、名词解释</div>
+        <div class="section-meta">共 4 题 · 写出定义</div>
+      </div>
+      <button class="expand-btn" onclick="toggleAll('noun', this)">全部展开</button>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">1</div>
+        <div class="q-text">电子商务经营者</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="noun-answer">
+            是指通过互联网等信息网络从事销售商品或者提供服务的经营活动的自然人、法人和非法人组织，包括：
+            <ul style="margin-top:8px;padding-left:18px;line-height:2.1;">
+              <li><strong>电子商务平台经营者</strong>（如淘宝、京东平台方）</li>
+              <li><strong>平台内经营者</strong>（开店的商家）</li>
+              <li><strong>通过自建网站/其他网络服务销售商品或提供服务的经营者</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">2</div>
+        <div class="q-text">搜索引擎优化（SEO）</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="noun-answer">
+            是利用搜索引擎的搜索规则来提高网站或者网店在搜索引擎中的<strong>自然排名</strong>，以获得<strong>自然搜索流量</strong>。<br><br>
+            <em>在淘宝语境下，即通过优化标题、属性、主图、销量、评价等，提升商品在淘宝搜索中的免费排名。</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">3</div>
+        <div class="q-text">站内流量</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="noun-answer">
+            是指由淘宝网本身带来的流量，是卖家主要的流量渠道，主要包括：
+            <ul style="margin-top:8px;padding-left:18px;line-height:2.1;">
+              <li><strong>免费流量</strong>（自然搜索、收藏关注、类目浏览等）</li>
+              <li><strong>付费流量</strong>（直通车、钻展等）</li>
+              <li><strong>营销推广工具</strong>（聚划算、天天特卖等活动）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">4</div>
+        <div class="q-text">内容运营</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="noun-answer">
+            运营者利用平台渠道，用<strong>文字、图片、视频、直播</strong>等形式，将卖家信息友好地呈现在用户面前，并<strong>激发用户参与、分享和传播</strong>的完整运营过程。<br><br>
+            <em>目的在于通过优质内容建立品牌认知、提升用户粘性、促进转化和复购。</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 四、简答题 ====== -->
+  <section class="section sec-short" id="short">
+    <div class="section-header">
+      <div class="section-icon">✍️</div>
+      <div class="section-meta-wrap">
+        <div class="section-title">四、简答题</div>
+        <div class="section-meta">共 4 题 · 要点式作答</div>
+      </div>
+      <button class="expand-btn" onclick="toggleAll('short', this)">全部展开</button>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">1</div>
+        <div class="q-text">京东物流POP的四个模式</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="answer-tag">4个答题要点</span>
+          <ul class="answer-list" style="margin-top:10px;">
+            <li><strong>FBP：京东全程仓储配送 京东自营</strong></li>
+            <li><strong>LBP：京东仓储配送 卖家开店·京东发货</strong></li>
+            <li><strong>SOP：商城模式 第三方平台·类似天猫</strong></li>
+            <li><strong>SOPL：商城+京东 卖家发货·京东配送</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">2</div>
+        <div class="q-text">怎么进行商品标题的优化？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="answer-tag">7个答题要点</span>
+          <ul class="answer-list" style="margin-top:10px;">
+            <li>商品标题应挖掘<strong>高搜索量、竞争低的长尾关键词</strong></li>
+            <li>商品标题应尽量<strong>突出商品的卖点</strong></li>
+            <li><strong>不宜频繁修改标题</strong>（频繁改动会影响权重积累）</li>
+            <li>商品标题中<strong>空格的处理和紧密排列</strong>（合理使用空格分隔关键词组）</li>
+            <li>要尽可能<strong>避免关键词内耗</strong>（同店铺商品标题不要过度重叠）</li>
+            <li>制作商品标题时<strong>不可刻意追求"标准化"</strong></li>
+            <li>标题优化应与<strong>属性优化、上下架时间优化</strong>相配合</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">3</div>
+        <div class="q-text">影响网店权重的因素有哪些？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="answer-tag">9个答题要点</span>
+          <ul class="answer-list" style="margin-top:10px;">
+            <li><strong>旺旺在线时长</strong>——在线时间越长，店铺服务分越高</li>
+            <li><strong>店铺层级</strong>——层级越高，权重越高</li>
+            <li><strong>店铺动态评分</strong>（DSR）和<strong>信用等级</strong></li>
+            <li><strong>跳失率</strong>——跳失率高说明用户体验差，影响权重</li>
+            <li><strong>动销率</strong>和<strong>滞销率</strong>——动销率高、滞销率低为正向影响</li>
+            <li><strong>纠纷退款率</strong>——纠纷越多，降权越明显</li>
+            <li><strong>降权</strong>——违规处罚直接降低权重</li>
+            <li><strong>回头客</strong>——复购率高说明买家满意度高</li>
+            <li><strong>消费者保障服务</strong>——参与极速退款、假一赔三等服务可提权</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-header">
+        <div class="q-num">4</div>
+        <div class="q-text">淘宝网搜索引擎有哪些处罚重点？</div>
+        <div class="q-arrow">▼</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <span class="answer-tag">12个答题要点</span>
+          <ul class="answer-list" style="margin-top:10px;">
+            <li><strong>商品超低价格</strong>（以不正常低价欺骗流量）</li>
+            <li><strong>商品超高邮费</strong>（将利润藏在运费里）</li>
+            <li><strong>网店偷换商品</strong>（下单后以次充好）</li>
+            <li><strong>商品标题滥用</strong>（堆砌无关关键词）</li>
+            <li><strong>商品描述不符</strong>（图文与实物不一致）</li>
+            <li><strong>上架违规商品</strong>（发布禁售、仿牌等商品）</li>
+            <li><strong>重复铺货</strong>（同一商品重复发布多条）</li>
+            <li><strong>上架广告商品</strong>（以商品形式发布广告信息）</li>
+            <li><strong>商品错放类目</strong>（故意放错类目获取流量）</li>
+            <li><strong>同一商品放在不同的类目</strong>（分散重复铺货）</li>
+            <li><strong>虚假交易</strong>（刷单、刷好评等行为）</li>
+            <li><strong>SKU作弊</strong>（SKU信息与实际商品不符）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+<script>
+  const TOTAL = 28;
+  const STORAGE_KEY = 'exam_progress_v2';
+  let answeredSet;
+
+  // 从 localStorage 恢复进度
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    answeredSet = new Set(saved || []);
+  } catch(e) {
+    answeredSet = new Set();
+  }
+
+  // 初始化进度（纯计数，不展开任何卡片——每次打开都是闭合状态）
+  updateProgress();
+
+  // 事件委托：只响应 .q-header 点击
+  document.querySelector('.container').addEventListener('click', function(e) {
+    const header = e.target.closest('.q-header');
+    if (!header) return;
+    const card = header.closest('.q-card');
+    if (!card) return;
+    toggleQ(card);
+  });
+
+  function toggleQ(card) {
+    card.classList.toggle('open');
+    const section = card.closest('.section');
+    const cards = section.querySelectorAll('.q-card');
+    const idx = Array.from(cards).indexOf(card);
+    const key = section.id + '-' + idx;
+    if (card.classList.contains('open')) {
+      answeredSet.add(key);
+    }
+    updateProgress();
+    saveProgress();
+  }
+
+  function toggleAll(sectionId, btn) {
+    const section = document.getElementById(sectionId);
+    const cards = section.querySelectorAll('.q-card');
+    const visibleCards = [...cards].filter(c => c.style.display !== 'none');
+    const allOpen = visibleCards.length > 0 && visibleCards.every(c => c.classList.contains('open'));
+    visibleCards.forEach(c => {
+      const idx = [...cards].indexOf(c);
+      const key = sectionId + '-' + idx;
+      if (allOpen) {
+        c.classList.remove('open');
+      } else {
+        c.classList.add('open');
+        answeredSet.add(key);
+      }
+    });
+    btn.textContent = allOpen ? '全部展开' : '全部折叠';
+    updateProgress();
+    saveProgress();
+  }
+
+  function updateProgress() {
+    const count = answeredSet.size;
+    const pct = TOTAL ? Math.round(count / TOTAL * 100) : 0;
+    document.getElementById('answeredCount').textContent = count;
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = count + ' / ' + TOTAL + ' 已查看';
+  }
+
+  function saveProgress() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...answeredSet])); } catch(e) {}
+  }
+
+  function scrollToSection(id, btn) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  // 滚动时更新导航高亮
+  const sections = ['judge', 'single', 'noun', 'short'];
+  const navBtns = document.querySelectorAll('.nav-btn');
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 100) current = id;
+    });
+    navBtns.forEach((btn, i) => btn.classList.toggle('active', sections[i] === current));
+  }, { passive: true });
+
+  // ===== 搜索功能（含高亮 + 按钮文案修正） =====
+  const searchInput = document.getElementById('searchInput');
+  const searchResult = document.getElementById('searchResult');
+  const searchClear = document.getElementById('searchClear');
+  const noResults = document.getElementById('noResults');
+  const allExpandBtns = document.querySelectorAll('.expand-btn');
+  const textOriginals = new Map();
+
+  function escapeRegExp(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function doSearch(query) {
+    query = query.trim();
+    const lowerQuery = query.toLowerCase();
+    const allCards = document.querySelectorAll('.q-card');
+    const allSections = document.querySelectorAll('.section');
+
+    // 还原所有高亮
+    textOriginals.forEach((orig, el) => { el.innerHTML = orig; });
+    textOriginals.clear();
+
+    if (!query) {
+      allCards.forEach(c => { c.style.display = ''; });
+      allSections.forEach(s => s.style.display = '');
+      // 根据每个 section 实际展开状态修正按钮文案
+      allExpandBtns.forEach(btn => {
+        const section = btn.closest('.section');
+        if (!section) { btn.textContent = '全部展开'; return; }
+        const cards = section.querySelectorAll('.q-card');
+        const allOpen = cards.length > 0 && [...cards].every(c => c.classList.contains('open'));
+        btn.textContent = allOpen ? '全部折叠' : '全部展开';
+      });
+      searchResult.textContent = '';
+      searchClear.classList.remove('visible');
+      noResults.style.display = 'none';
+      return;
+    }
+
+    searchClear.classList.add('visible');
+    let matchCount = 0;
+
+    allCards.forEach(card => {
+      if (card.textContent.toLowerCase().includes(lowerQuery)) {
+        card.style.display = '';
+        card.classList.add('open');
+        matchCount++;
+        const qText = card.querySelector('.q-text');
+        if (qText && qText.textContent.toLowerCase().includes(lowerQuery)) {
+          if (!textOriginals.has(qText)) textOriginals.set(qText, qText.innerHTML);
+          const regex = new RegExp('(' + escapeRegExp(query) + ')', 'gi');
+          qText.innerHTML = textOriginals.get(qText).replace(regex, '<mark>$1</mark>');
+        }
+      } else {
+        card.style.display = 'none';
+        card.classList.remove('open');
+      }
+    });
+
+    // 搜索激活时修正按钮文案
+    allExpandBtns.forEach(btn => {
+      const section = btn.closest('.section');
+      if (!section) return;
+      const cards = section.querySelectorAll('.q-card');
+      const visible = [...cards].filter(c => c.style.display !== 'none');
+      btn.textContent = visible.length > 0 && visible.every(c => c.classList.contains('open'))
+        ? '全部折叠' : '全部展开';
+    });
+
+    allSections.forEach(section => {
+      const visible = section.querySelectorAll('.q-card:not([style*="display: none"])');
+      section.style.display = visible.length > 0 ? '' : 'none';
+    });
+
+    searchResult.textContent = matchCount > 0
+      ? '找到 ' + matchCount + ' 道相关题目'
+      : '无匹配结果';
+    noResults.style.display = matchCount > 0 ? 'none' : 'block';
+  }
+
+  searchInput.addEventListener('input', function() { doSearch(this.value); });
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const first = document.querySelector('.q-card:not([style*="display: none"])');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+
+  function clearSearch() {
+    searchInput.value = '';
+    doSearch('');
+    searchInput.focus();
+  }
+
+  // 回到顶部
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function() {
+    backTop.classList.toggle('visible', window.scrollY > 300);
+  }, { passive: true });
+</script>
+</body>
+</html>
